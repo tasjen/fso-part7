@@ -100,9 +100,9 @@ const CreateNew = (props) => {
     navigate('/anecdotes');
   };
   const resetAll = () => {
-    content.reset();
-    author.reset();
-    info.reset();
+    content.onReset();
+    author.onReset();
+    info.onReset();
   }
 
   return (
