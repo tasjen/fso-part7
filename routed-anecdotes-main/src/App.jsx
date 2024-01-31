@@ -99,6 +99,11 @@ const CreateNew = (props) => {
     });
     navigate('/anecdotes');
   };
+  const resetAll = () => {
+    content.reset();
+    author.reset();
+    info.reset();
+  }
 
   return (
     <div>
@@ -116,7 +121,8 @@ const CreateNew = (props) => {
           url for more info
           <input {...info} name="info" />
         </div>
-        <button>create</button>
+        <button type="submit">create</button>
+        <button type="button" onClick={resetAll}>reset</button>
       </form>
     </div>
   );
